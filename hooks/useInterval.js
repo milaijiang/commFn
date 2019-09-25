@@ -1,6 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
-
-function useInterval (callback, delay) {
+/**
+ *定时器hook
+ *
+ * @param {function} callback
+ * @param {number} delay  //为null则暂停定时器 
+ */
+function useInterval(callback, delay) {
     const saveCallback = useRef();
 
     useEffect(() => {
